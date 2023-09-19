@@ -7,7 +7,7 @@ import asyncio
 # db = Database('maya_mail.db')
 import time
 
-TOKEN_API = '6394952533:AAH9nlTghSEG-F-P-LCTSN59APZQxybRt6o'
+TOKEN_API = 'hidden'
 bot = Bot(TOKEN_API)
 dp = Dispatcher(bot)
 
@@ -21,9 +21,9 @@ async def beginning(message):
     while flag:
         #  мы будем проверять обновления каждый час, так проще
         # тут получаем датафрейм с расписанием и ждем час, чтобы сделать проверку на изменения
-        base_timetable = tp.get_timetable(key='1oZ1epXfxBrHG7crr5nMl8WN7rbhjJJWFD1FHBS9pXJk')
+        base_timetable = tp.get_timetable(key='1ylzvoNdYh5TKr248rEWiGCvcLcuvDnDBQjep4i1x9cU')
         time.sleep(3600)
-        temp_timetable = tp.get_timetable(key='1oZ1epXfxBrHG7crr5nMl8WN7rbhjJJWFD1FHBS9pXJk')
+        temp_timetable = tp.get_timetable(key='1ylzvoNdYh5TKr248rEWiGCvcLcuvDnDBQjep4i1x9cU')
         new_timetable = tp.check_on_updates(base_timetable, temp_timetable)
         # если изменения есть, то мы входим в ксловия
         if new_timetable != tp.get_rows_as_lists(temp_timetable):
