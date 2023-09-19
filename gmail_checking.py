@@ -11,7 +11,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 db = Database('maya_mail.db')
 
-TOKEN_API = '6394952533:AAH9nlTghSEG-F-P-LCTSN59APZQxybRt6o'
+TOKEN_API = 'hidden'
 bot = Bot(TOKEN_API)
 dp = Dispatcher(bot)
 
